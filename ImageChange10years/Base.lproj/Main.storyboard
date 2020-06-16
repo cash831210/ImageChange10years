@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d7d-ts-pS9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image ChangeVC-->
+        <scene sceneID="mXt-vo-Ct6">
+            <objects>
+                <viewController id="d7d-ts-pS9" customClass="ImageChangeVC" customModule="_521demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ITe-QP-aeS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image1" translatesAutoresizingMaskIntoConstraints="NO" id="xoD-kn-Aey">
+                                <rect key="frame" x="82" y="136" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="CmG-O5-NKB"/>
+                                    <constraint firstAttribute="width" constant="250" id="DZc-zC-dmY"/>
+                                </constraints>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUN-iZ-FNQ">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="284018166.46975601">
+                                    <!--2010-01-01 05:56:06 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="284036400">
+                                    <!--2010-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="631105200">
+                                    <!--2020-12-31 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="ChangeDate:" destination="d7d-ts-pS9" eventType="valueChanged" id="bSh-a9-PJc"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9D2-iC-sQe">
+                                <rect key="frame" x="176" y="570" width="62" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="下一張"/>
+                                <connections>
+                                    <action selector="ClickChangeBt:" destination="d7d-ts-pS9" eventType="touchUpInside" id="vVD-4e-mdb"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DXq-8n-Ma8">
+                                <rect key="frame" x="10" y="444" width="394" height="121"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！這是介紹文字框！</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="I72-O4-Nlv">
+                                <rect key="frame" x="68" y="611" width="278" height="31"/>
+                                <connections>
+                                    <action selector="ImageChangeSD:" destination="d7d-ts-pS9" eventType="valueChanged" id="gZU-Q5-Jbu"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTa-B3-sKM">
+                                <rect key="frame" x="188" y="95.5" width="38.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SUN-iZ-FNQ" firstAttribute="leading" secondItem="zah-iV-pDy" secondAttribute="leading" id="1a2-Vq-dzN"/>
+                            <constraint firstItem="SUN-iZ-FNQ" firstAttribute="top" secondItem="I72-O4-Nlv" secondAttribute="bottom" constant="5" id="4g9-hD-smP"/>
+                            <constraint firstItem="xoD-kn-Aey" firstAttribute="centerX" secondItem="ITe-QP-aeS" secondAttribute="centerX" id="A5p-rY-wUB"/>
+                            <constraint firstItem="SUN-iZ-FNQ" firstAttribute="trailing" secondItem="zah-iV-pDy" secondAttribute="trailing" id="FWS-3k-YDX"/>
+                            <constraint firstItem="zah-iV-pDy" firstAttribute="bottom" secondItem="SUN-iZ-FNQ" secondAttribute="bottom" id="Ijv-Cu-W6x"/>
+                            <constraint firstItem="I72-O4-Nlv" firstAttribute="leading" secondItem="zah-iV-pDy" secondAttribute="leading" constant="70" id="Jko-tb-PQo"/>
+                            <constraint firstItem="zah-iV-pDy" firstAttribute="trailing" secondItem="DXq-8n-Ma8" secondAttribute="trailing" constant="10" id="KJ8-bR-xAh"/>
+                            <constraint firstItem="DXq-8n-Ma8" firstAttribute="top" secondItem="xoD-kn-Aey" secondAttribute="bottom" constant="58" id="Ke8-Yw-urI"/>
+                            <constraint firstItem="UTa-B3-sKM" firstAttribute="centerX" secondItem="ITe-QP-aeS" secondAttribute="centerX" id="Pwu-ol-0pB"/>
+                            <constraint firstItem="xoD-kn-Aey" firstAttribute="top" secondItem="zah-iV-pDy" secondAttribute="top" constant="92" id="QhW-KN-m7X"/>
+                            <constraint firstItem="9D2-iC-sQe" firstAttribute="top" secondItem="DXq-8n-Ma8" secondAttribute="bottom" constant="5" id="TcA-AJ-1Kr"/>
+                            <constraint firstItem="xoD-kn-Aey" firstAttribute="top" secondItem="UTa-B3-sKM" secondAttribute="bottom" constant="20" id="e1N-Gx-IWC"/>
+                            <constraint firstItem="9D2-iC-sQe" firstAttribute="centerX" secondItem="ITe-QP-aeS" secondAttribute="centerX" id="ecM-A3-mll"/>
+                            <constraint firstItem="9D2-iC-sQe" firstAttribute="top" secondItem="DXq-8n-Ma8" secondAttribute="bottom" constant="5" id="jzQ-18-ewP"/>
+                            <constraint firstItem="DXq-8n-Ma8" firstAttribute="leading" secondItem="zah-iV-pDy" secondAttribute="leading" constant="10" id="lSh-WX-tYF"/>
+                            <constraint firstItem="zah-iV-pDy" firstAttribute="trailing" secondItem="I72-O4-Nlv" secondAttribute="trailing" constant="70" id="q5u-2Z-n0h"/>
+                            <constraint firstItem="I72-O4-Nlv" firstAttribute="top" secondItem="9D2-iC-sQe" secondAttribute="bottom" constant="5" id="r1i-46-tXf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zah-iV-pDy"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImageSD" destination="I72-O4-Nlv" id="AvJ-gW-DaN"/>
+                        <outlet property="MyImage" destination="xoD-kn-Aey" id="HBg-Y1-9ax"/>
+                        <outlet property="NumLabel" destination="UTa-B3-sKM" id="57L-iA-tdl"/>
+                        <outlet property="datePicker" destination="SUN-iZ-FNQ" id="IKt-vj-VC1"/>
+                        <outlet property="textView" destination="DXq-8n-Ma8" id="VVK-8B-jWq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lzE-Mb-jve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="-230"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image1" width="604" height="453"/>
+    </resources>
+</document>
